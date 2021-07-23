@@ -12,9 +12,11 @@
     "glob": "^7.1.7",
     "webpack": "^5.46.0",
     "webpack-assets-manifest": "^5.0.6",
-    "webpack-cli": "^4.7.2"
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
   },
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "serve": "webpack serve"
   }
 }
