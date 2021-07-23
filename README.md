@@ -190,3 +190,18 @@ rails s
 ```
 
 http://localhost:3000
+
+
+### Dev serverをdockerで使う
+https://webpack.js.org/configuration/dev-server/#devserverhost
+
+> Specify a host to use. If you want your server to be accessible externally, specify it like this:
+
+```javascript
+module.exports = {
+  //...
+  devServer: {
+    host: '0.0.0.0',
+  },
+};
+```
