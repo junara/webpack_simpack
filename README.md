@@ -115,3 +115,78 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'slim'
 
 ```
+
+### yarn
+
+package.jsonを設定ファイルを作る
+
+```
+yarn init
+```
+
+```json
+{
+  "name": "weback_simpack",
+  "version": "1.0.0",
+  "private": true,
+  "repository": "https://github.com/junara/webpack_simpack",
+  "author": "junara <jung5araki@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.6.0"
+  },
+  "devDependencies": {
+    "glob": "^7.1.7",
+    "webpack": "^5.46.0",
+    "webpack-assets-manifest": "^5.0.6",
+    "webpack-cli": "^4.7.2"
+  },
+  "scripts": {
+    "build": "webpack"
+  }
+}
+```
+
+### webpack
+* install
+  https://webpack.js.org/guides/getting-started/
+
+```shell
+yarn add --dev webpack webpack-cli     
+```
+
+### simpackerで 複数endpointを使うために
+
+manifest.jsonを使えるようにする。
+
+```shell
+yarn add --dev webpack-assets-manifest    
+```
+
+複数エンドポイントを読み込むためにglobいれる。
+
+```shell
+yarn add --dev glob    
+```
+
+動作確認のためにjqueryをいれる。
+
+```shell
+yarn add jquery
+```
+
+### 動作確認
+
+SplitChunksPluginが vendor.jsとして出力されているので読み込む。
+
+```slim
+= javascript_pack_tag 'vendor'
+= javascript_pack_tag 'posts'
+div#app
+```
+
+```shell
+rails s
+```
+
+http://localhost:3000

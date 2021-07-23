@@ -1,0 +1,20 @@
+{
+  "name": "weback_simpack",
+  "version": "1.0.0",
+  "private": true,
+  "repository": "https://github.com/junara/webpack_simpack",
+  "author": "junara <jung5araki@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.6.0"
+  },
+  "devDependencies": {
+    "glob": "^7.1.7",
+    "webpack": "^5.46.0",
+    "webpack-assets-manifest": "^5.0.6",
+    "webpack-cli": "^4.7.2"
+  },
+  "scripts": {
+    "build": "webpack"
+  }
+}
