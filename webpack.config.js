@@ -31,7 +31,7 @@ module.exports = {
   devServer: {
     contentBase: path.resolve(__dirname, "public"),
     publicPath: "/packs/",
-    host: "localhost",
+    host: "0.0.0.0",
     port: 8081,
     headers: {
       "Access-Control-Allow-Origin": "*",

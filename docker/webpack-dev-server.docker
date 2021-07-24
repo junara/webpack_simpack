@@ -1,0 +1,9 @@
+FROM node:16-slim
+RUN mkdir /myapp
+WORKDIR /myapp
+COPY package.json yarn.lock /myapp/
+RUN yarn
+COPY webpack.config.js /myapp/
+COPY app/javascript /myapp/app/javascript
+RUN mkdir /public
+RUN mkdir /public/packs
